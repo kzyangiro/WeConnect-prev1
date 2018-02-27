@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WeConnect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script type="text/javascript">
+  
+    $(document).ready(function(){
+        $("#signin").click(function(){
+            
+            $("#signinDiv").show(200);
+            $("#signupDiv").hide(200);
+        });
+    
+        $("#signup").click(function(){
+            
+            $("#signinDiv").hide(200);
+            $("#signupDiv").show(200);
+        });
+    });
+
+</script>
+<body>
+    <div class="jumbotron">
+        <h2>WeConnect</h2>
+    </div>
+
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12" id="searchbar">
+
+                    <span><button class="btn btn-primary" id="addbusiness">Add a business</button></span>
+                    <span>Search
+                    <input type="text" id="text-box"/>
+                    </span>
+                    
+                </div>
+
+                <div class="col-md-12">
+                    <h3>Available Businesses</h3>
+                    <div id="filter">Filter By: 
+                        <select id="text-box">
+                            <option selected>Default</option>
+                            <option>By Name</option>
+                            <option>By Location</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-md-12"><br />
+
+                <table border="1"class="table table-condensed" style="width:80% !important;
+                margin:auto;">
+                  <thead>
+                    <tr>
+                      <th id="th1">Name</th>
+                      <th id="th2">Location</th>
+                      <th id="th3">Update</th>
+                      <th id="th3">Review</th>
+                      <th id="th3">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>             
+                        <td>Andela</td>
+                        <td>TRM</td>
+                        <td id="glyph"><span class="glyphicon glyphicon-edit"></span></td>
+                        <td id="glyph"><span class="glyphicon glyphicon-info-sign"></span></td>
+                        <td id="glyph"><span class="glyphicon glyphicon-remove-sign"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                </div>
+        </div>
+    </div>
+    
+</body>
+</html>
